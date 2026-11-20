@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --row-gap: 12px;
+    --column-gap: 12px;
+    --column-padding: 15px;
+    --accent-color: magenta;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9fb;
+}
+
+.nav-bar {
+    max-width: 1000px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-gap);
+    padding: 12px;
+    border: 5px solid var(--accent-color);
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--column-gap);
+}
+
+[class^="col-"] {
+    padding: var(--column-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #000;
+    background-color: white;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+[class^="col-"]:hover {
+    background-color: #fce4fc;
+}
+
+.header, .footer {
+    background-color: lightblue;
+}
+
+.sidebar {
+    background-color: lightgray;
+}
+
+.col-1  { flex: 0 0 calc((100% / 12) * 1  - (var(--column-gap) * 11 / 12)); }
+.col-2  { flex: 0 0 calc((100% / 12) * 2  - (var(--column-gap) * 10 / 12)); }
+.col-3  { flex: 0 0 calc((100% / 12) * 3  - (var(--column-gap) * 9  / 12)); }
+.col-4  { flex: 0 0 calc((100% / 12) * 4  - (var(--column-gap) * 8  / 12)); }
+.col-5  { flex: 0 0 calc((100% / 12) * 5  - (var(--column-gap) * 7  / 12)); }
+.col-6  { flex: 0 0 calc((100% / 12) * 6  - (var(--column-gap) * 6  / 12)); }
+.col-7  { flex: 0 0 calc((100% / 12) * 7  - (var(--column-gap) * 5  / 12)); }
+.col-8  { flex: 0 0 calc((100% / 12) * 8  - (var(--column-gap) * 4  / 12)); }
+.col-9  { flex: 0 0 calc((100% / 12) * 9  - (var(--column-gap) * 3  / 12)); }
+.col-10 { flex: 0 0 calc((100% / 12) * 10 - (var(--column-gap) * 2  / 12)); }
+.col-11 { flex: 0 0 calc((100% / 12) * 11 - (var(--column-gap) * 1  / 12)); }
+.col-12 { flex: 0 0 100%; }
+
+@media (max-width: 768px) {
+    [class^="col-"] {
+        flex: 0 0 100%;
+    }
+}
