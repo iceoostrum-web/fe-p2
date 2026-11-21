@@ -7,24 +7,17 @@
 :root {
     --row-gap: 10px;
     --column-gap: 10px;
-    --column-padding: 15px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    --column-padding: 10px;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1000px;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: var(--row-gap);
-    padding: 10px;
-    border: 5px solid rgb(79, 198, 228);
+    border: 5px solid #f0f;
 }
 
 .row {
@@ -36,80 +29,56 @@ body {
 [class^="col-"] {
     padding: var(--column-padding);
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    align-items: center;
     border: 1px solid #000;
-    background-color: whitesmoke;
-}
-
-.header {
-    background-color: lightblue;
-}
-
-.sidebar {
-    background-color: lightgray;
-}
-
-.footer {
-    background-color: lightblue;
 }
 
 .col-1 {
-    flex-grow: 0;
     flex-basis: 8.33%;
 }
 
 .col-2 {
-    flex-grow: 0;
     flex-basis: 16.67%;
 }
 
 .col-3 {
-    flex-grow: 0;
     flex-basis: 25%;
 }
 
 .col-4 {
-    flex-grow: 0;
     flex-basis: 33.33%;
 }
 
 .col-5 {
-    flex-grow: 0;
     flex-basis: 41.67%;
 }
 
 .col-6 {
-    flex-grow: 0;
     flex-basis: 50%;
 }
 
 .col-7 {
-    flex-grow: 0;
     flex-basis: 58.33%;
 }
 
 .col-8 {
-    flex-grow: 0;
     flex-basis: 66.67%;
 }
 
 .col-9 {
-    flex-grow: 0;
     flex-basis: 75%;
 }
 
 .col-10 {
-    flex-grow: 0;
     flex-basis: 83.33%;
 }
 
 .col-11 {
-    flex-grow: 0;
     flex-basis: 91.67%;
 }
 
 .col-12 {
-    flex-grow: 0;
     flex-basis: 100%;
 }
